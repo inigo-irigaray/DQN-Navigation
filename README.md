@@ -51,3 +51,10 @@
     unityagents
     baselines
     
+## How to run the environment
+
+<p align=justify>1. Clone this repository.</p>
+
+<p align=justify>2. Install all required dependencies (can be automatically installed within the iPython notebook).</p>
+
+<p align=justify>3. Follow the instructions in train.ipynb to run the environment and train the agent.</p>
