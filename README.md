@@ -1,5 +1,7 @@
 # DQN-Navigation
 
+<p align=justify> This project is the first among three of Udacity's Deep Reinforcement Learning Nanodegree and aims to show the power of Q-Learning to solve complex environments with discrete action spaces. In particular, I implemented a version of Rainbow DQN that I learned from the nanodegree and the textbook Deep Reinforcement Learning Hands-On.</p>
+
 ## Environment
 
 <p align=justify>In this project an agent navigates a vectorized environment to collect yellow bananas, obtaining a reward of +1 each, and avoid blue bananas, for a -1 reward for each blue banana collected. The state space has 37 dimensions representing the agent's velocity and ray-based perception of the objects around the agent. The action space is discrete and has four dimensions:</p>
