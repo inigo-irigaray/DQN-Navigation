@@ -49,4 +49,5 @@
     ipykernel
     tensorboardX==1.4
     unityagents
+    baselines
     
