@@ -2,6 +2,8 @@ import numpy as np
 import collections
 
 
+
+
 Experience = collections.namedtuple('Experience', ['state', 'action', 'reward', 'done'])
 
 class ExperienceSource:
@@ -103,91 +105,8 @@ class ExperienceSource:
             self.total_rewards = [] #self.total_steps = []
         return r
 
-"""
-class ExperienceSource:
-    def __init__(self, env, agent, step_count=1):
-        ""
-        Starts experience generator.
-        ----------
-        Input:
-            env: Environment.
-            agent: 
-            step_count: 
-        ""
-        assert isinstance(step_count, int)
-        self.agent = agent
-        self.env = env
-        self.step_count = step_count
-        
-    def __iter__(self):
-        states, agent_states, histories, cur_rewards, cur_steps = [], [], [], [], []
-        obs = env.reset()
-        states.append(obs)
-        histories.append(collections.deque(maxlen=self.step_count))
-        cur_rewards.append(0.0)
-        cur_steps.append(0)
-        agent_states.append(self.agent.initial_state())
-        
-        iter_idx = 0
-        while True:
-            actions = [None] * len(states)
-            states_input, states_indices = [], []
-            for idx, state in enumerate(states):
-                if state is None:
-                    actions[idx] = self.env.action_space.sample()
-                else:
-                    states_input.append(state)
-                    states_indices.append(idx)
-
-            if states_input:
-                states_actions, new_agent_states = self.agent(states_input, agent_states)
-                for idx, action in enumerate(states_actions):
-                    g_idx = states_indices[idx]
-                    actions[g_idx] = action
-                    agent_states[g_idx] = next_agent_states[idx]
-
-            next_state, r, is_done, _ = env.step(actions[0][0])
-            next_state_n = [next_state]
-            r_n = [r]
-            is_done_n = [is_done]
-                
-            for ofs, (action, next_state, r, is_done) in enumerate(zip(action_n, next_state_n, r_n, is_done_n)):
-                idx = ofs
-                state = states[idx]
-                history = histories[idx]
-                
-                cur_rewards[idx] += r
-                cur_steps[idx] += 1
-                
-                if state is not None:
-                    history.append(Experience(state=state, action=action, reward=r, done=is_done))
-                    
-                if len(history) == self.step_count:
-                    yield tuple(history)
-                
-                states[idx] = next_state
-                if is_done:
-                    if 0 < len(history) < self.step_count:
-                        yield tuple(history)
-                    
-                    while len(history) > 1:
-                        history.popleft()
-                        yield tuple(history)    
-                    self.total_rewards.append(cur_rewards[idx])
-                    self.total_steps.append(cur_steps[idx])
-                    cur_rewards[idx] = 0.0
-                    cur_steps[idx] = 0
-                        
-                    states[idx] = self.env.reset()
-                    agent_states[idx] = self.agent.initial_state()
-                    history.clear()
     
-    def pop_total_rewards(self):
-        r = self.total_rewards
-        if r:
-            self.total_rewards, self.total_steps = [], []
-        return r
-"""
+    
 
 ExperienceFirstLast = collections.namedtuple('ExperienceFirstLast', ('state', 'action', 'reward', 'last_state'))
 
