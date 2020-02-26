@@ -32,6 +32,7 @@ class RewardTracker:
 
     def __exit__(self, *args):
         self._writer.close()
+        
     def reward(self, reward, frame, epsilon=None):
         """
         Writes data into tensorboard API and checks if the model has reached the stop_reward (solved the problem).
