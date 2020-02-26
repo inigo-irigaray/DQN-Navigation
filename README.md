@@ -51,7 +51,6 @@
     ipykernel
     tensorboardX==1.4
     unityagents
-    baselines
     
 ## How to run the environment
 
