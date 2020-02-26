@@ -54,8 +54,6 @@ class RainbowDQN(nn.Module):
         self.fc = nn.Sequential(NoisyLinear(256, 512),
                                    nn.ReLU(),
                                    NoisyLinear(512, quant * n_actions))
-        
-        self.t = torch.FloatTensor((2 * np.arange(quant) + 1) / (2.0 * quant)).view(1, -1)
                 
     def forward(self, x):
         x = self.common(x)
