@@ -59,4 +59,4 @@
 
 <p align=justify>2. Install all required dependencies (can be automatically installed within the iPython notebook).</p>
 
-<p align=justify>3. Follow the instructions in train.ipynb to run the environment and train the agent.</p>
+<p align=justify>3. Follow the instructions in <a href=https://github.com/inigo-irigaray/DQN-Navigation/blob/master/Navigation.ipynb>Navigation.ipynb</a> to run the environment and train the agent.</p>
