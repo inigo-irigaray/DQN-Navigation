@@ -35,8 +35,3 @@ class Agent:
         Q = Q.data.cpu().numpy()
         actions = np.argmax(Q, axis=1)
         return actions, agent_states
-    """
-        q_v = self.dqn_model(states)
-        q = q_v.data.cpu().numpy()
-        actions = np.argmax(q, axis=1)
-        return actions, agent_states"""
