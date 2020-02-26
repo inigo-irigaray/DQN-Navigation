@@ -32,7 +32,6 @@ class RewardTracker:
 
     def __exit__(self, *args):
         self._writer.close()
-
     def reward(self, reward, frame, epsilon=None):
         """
         Writes data into tensorboard API and checks if the model has reached the stop_reward (solved the problem).
@@ -43,16 +42,17 @@ class RewardTracker:
         self.ts = time.time()
         mean_reward = np.mean(self.total_rewards[-100:])
         epsilon_str = "" if epsilon is None else ", eps %.2f" % epsilon
-        print("%d: done %d games, mean reward %.3f, speed %.2f f/s%s" % (frame, len(self.total_rewards), mean_reward,
-                                                                         speed, epsilon_str))
+        print('reward %.3f' % reward)
+        print("%d: done %d games, episode reward %.3f, mean reward-100 %.3f, speed %.2f f/s%s" % (frame, len(self.total_rewards),
+                                                                                                 reward, mean_reward, speed,
+                                                                                                 epsilon_str))
         sys.stdout.flush()
         if epsilon is not None:
             self._writer.add_scalar("epsilon", epsilon, frame)
         self._writer.add_scalar("speed", speed, frame)
         self._writer.add_scalar("reward_100", mean_reward, frame)
         self._writer.add_scalar("reward", reward, frame)
-        self._reward100.append(mean_reward)
-        if np.mean(self._reward100) > self._stop_reward:
+        if mean_reward > self._stop_reward:
             print("Solved in %d frames!" % frame)
             return True
         return False
