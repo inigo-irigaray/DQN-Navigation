@@ -83,8 +83,7 @@ def unpack_batch(batch):
 
 def calc_loss(batch, net, tgt_net, quant, gamma, device="cpu"):
     """
-    Calculates total accumulated loss for backpropagation and individual loss values for every batch to update
-    priorities in the replay buffer.
+    Calculates total accumulated loss (huber loss for quantile regression) for backpropagation.
     """
     states, actions, rewards, dones, next_states = unpack_batch(batch)
     batch_size = len(batch)
