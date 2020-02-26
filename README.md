@@ -1,6 +1,6 @@
 # DQN-Navigation
 
-<p align=justify> This project is the first among three of Udacity's Deep Reinforcement Learning Nanodegree and aims to show the power of Q-Learning to solve complex environments with discrete action spaces. In particular, I implemented a version of Rainbow DQN that I learned from the nanodegree, the textbook Deep Reinforcement Learning Hands-On and research papers from the reinforcement leanring literature.</p>
+<p align=justify> This project is the first among three of Udacity's Deep Reinforcement Learning Nanodegree and aims to show the power of Q-Learning to solve complex environments with discrete action spaces. In particular, I implemented a version of Rainbow DQN that I learned from the nanodegree, the textbook Deep Reinforcement Learning Hands-On and research papers from the reinforcement learning literature.</p>
 
 ## Environment
 
