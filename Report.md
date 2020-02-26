@@ -35,17 +35,18 @@
 
 ### agent.py
 
-
+<p align=justify>This file creates the agent object responsible for selecting actions. It allows the DQN model to process states, averages over the quantiles for each action and the selects the action through argmax.</p>
 
 ### n_step.py
 
-<b>Multi-step bootstrapping</b>
+<p align=justify>This file instances an experience generator that facilitates the agent interaction with the environment, collecting rewards and state information. Basic environment exploration was improved with <b>multi-step bootstrapping</b>, where the agent unrolls the same action n-times (2 in my implementation) to speed-up training</p>
 
 ### replaybuffer.py
 
-
+<p align=justify>The experience replay buffer implemented in this model iterates over the experience generator to collect and store experiences and allows the agent to learn from mini-batches randomly chosen from the buffer. The buffer has a size of 100000 and the minibatches size of 64.</p>
 
 ### helpers.py
+
 
 
 ### Navigation.pynb
@@ -54,6 +55,10 @@
 
 ## Plot of Rewards
 
+<p align=justify> The plots below shows episodic rewards and the mean reward for the past 100 episodes. The goal of obtaining obtaining mean reward_100 > 13.0 was reached after 23 minutes of training in episode 497 with a mean reward of 13.02. The agent kept training thereafter, however I have modified the code in this repository to stop training the moment it accomplishes the goal for future runs.</p>
 
+<p align="center"><img src="https://github.com/inigo-irigaray/DQN-Navigation/blob/master/imgs/reward_plot.png"></p>
+
+<p align="center"><img src="https://github.com/inigo-irigaray/DQN-Navigation/blob/master/imgs/reward100_plot.png"></p>
 
 ## Future Work
