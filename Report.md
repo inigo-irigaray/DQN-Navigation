@@ -63,4 +63,4 @@
 
 ## Future Work
 
-<p align=justify> Future work will be based on the integration of Prioritized Experience Replay into the algorithm and Dueling DQN</p>.
+<p align=justify> Future work will be based on the integration of Prioritized Experience Replay into the algorithm and Dueling DQN.</p>
