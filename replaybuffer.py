@@ -33,7 +33,6 @@ class ReplayBuffer:
         ----------
             sample: Transition (s,a,r,s',done).
         """
-        #data = (obs_t, action, reward, obs_tp1, done)
 
         if self._next_idx >= len(self._buffer): #appends data if max capacity not reached yet
             self._buffer.append(sample)
