@@ -47,11 +47,11 @@
 
 ### helpers.py
 
-
+<p align=justify>This file contains a number of utility functions that help the model integrate and work. The first one is a reward tracker that stores rewards, writes them into the tensorboard logger and checks whether the goal has been successfully completed. Additionally, a second function helps unpack batches from the experiene replay into states, actions, rewards, next states and dones batches. And finally a third function helps calculate the loss. This loss function integrates the <b>double dqn</b> algorithm with the QR-Distributional DQN <b>Huber Loss</b>.</p>
 
 ### Navigation.pynb
 
-
+<p align=justify>Finally, the iPython notebook import all other files and integrates them for the main training.</p>
 
 ## Plot of Rewards
 
@@ -62,3 +62,5 @@
 <p align="center"><img src="https://github.com/inigo-irigaray/DQN-Navigation/blob/master/imgs/reward100_plot.png"></p>
 
 ## Future Work
+
+<p align=justify> Future work will be based on the integration of Prioritized Experience Replay into the algorithm and Dueling DQN</p>.
