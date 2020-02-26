@@ -51,7 +51,7 @@
 
 ### Navigation.pynb
 
-<p align=justify>Finally, the iPython notebook import all other files and integrates them for the main training.</p>
+<p align=justify>Finally, the iPython notebook imports all other files and integrates them for the main training.</p>
 
 ## Plot of Rewards
 
