@@ -55,7 +55,7 @@
 
 ## Plot of Rewards
 
-<p align=justify> The plots below shows episodic rewards and the mean reward for the past 100 episodes. The goal of obtaining obtaining mean reward_100 > 13.0 was reached after 23 minutes of training in episode 497 with a mean reward of 13.02. The agent kept training thereafter, however I have modified the code in this repository to stop training the moment it accomplishes the goal for future runs.</p>
+<p align=justify> The plots below shows episodic rewards and the mean reward for the past 100 episodes, with the y axis representing reward value and the x axis relative runtime. The goal of obtaining obtaining mean reward_100 > 13.0 was reached after 23 minutes of training in episode 497 with a mean reward of 13.02. The agent kept training thereafter, however I have modified the code in this repository to stop training the moment it accomplishes the goal for future runs.</p>
 
 <p align="center"><img src="https://github.com/inigo-irigaray/DQN-Navigation/blob/master/imgs/reward_plot.png"></p>
 
